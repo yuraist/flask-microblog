@@ -20,7 +20,7 @@ class EditProfileForm(FlaskForm):
 
 class EditProfileAdminForm(FlaskForm):
     """Form for profile editing by admin"""
-    username = StringField('Username', validators=[DataRequired(), Regexp('^[A-Za-z][A-Za-z_.]*$'), Length(1, 64)])
+    username = StringField('Username', validators=[DataRequired(), Regexp('^[A-Za-z][A-Za-z0-9_.]*$'), Length(1, 64)])
     email = StringField('Email', validators=[DataRequired(), Length(1, 64), Email()])
     confirmed = BooleanField('Confirmed')
     role = SelectField('Role', coerce=int)
