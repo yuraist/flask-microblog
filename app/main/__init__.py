@@ -3,7 +3,7 @@ from flask import Blueprint
 # Initialize a blueprint for the 'main' module
 main = Blueprint('main', __name__)
 
-from . import views, error
+from . import views, errors
 from ..models import Permission
 
 
